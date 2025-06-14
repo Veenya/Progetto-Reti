@@ -1,9 +1,14 @@
 # Relazione Tecnica – Progetto Reti
 
 Autore: Vera Murgia
+
 Matricola: 0001114041
+
 Università di Bologna - Corso di Laurea triennale in Ingegneria e Scienze Informatiche
+
 Anno 2025
+
+
 ## Introduzione
 
 Il progetto consiste nella realizzazione di un **web server semplice in Python** capace di gestire richieste HTTP `GET` per servire pagine web statiche da una directory locale. È stato implementato utilizzando il modulo `socket` della libreria standard Python, senza l’uso di framework esterni, per fornire una comprensione di base dei meccanismi di comunicazione client-server su rete TCP/IP.
