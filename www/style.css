@@ -1,0 +1,89 @@
+/* Base styling and layout for all pages */
+body {
+    margin: 0;
+    padding: 1em;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 1s ease-in-out;
+    text-align: center; /* to center links/text by default */
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Paragraphs and links style */
+p, a {
+    font-size: 1.2em;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Navigation styling */
+nav {
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+
+/* Navigation links */
+nav a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 0.5em;
+    transition: color 0.3s ease;
+}
+
+/* Links outside nav */
+a {
+    margin-top: 1em;
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Hover effects */
+nav a:hover,
+a:hover {
+    color: #0056b3;
+}
+
+/* Special style for error page h1 */
+.error h1 {
+    color: #cc0000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive typography for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.8em;
+    }
+    p, a {
+        font-size: 1em;
+    }
+    nav {
+        font-size: 1em;
+    }
+}
