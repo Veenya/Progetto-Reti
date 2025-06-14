@@ -37,7 +37,15 @@ def handle_request(client_socket):
                 header = "HTTP/1.1 200 OK\r\n\r\n".encode('utf-8')
                 response = header + content
             else:
-                response = "HTTP/1.1 404 Not Found\r\n\r\nFile non trovato.".encode('utf-8')
+                #response = "HTTP/1.1 404 Not Found\r\n\r\nFile non trovato.".encode('utf-8')
+                error_404_path = os.path.join(WWW_DIR, '404.html')
+                if os.path.isfile(error_404_path):
+                    with open(error_404_path, 'rb') as f:
+                        content = f.read()
+                    header = "HTTP/1.1 404 Not Found\r\n\r\n".encode('utf-8')
+                    response = header + content
+                else:
+                    response = "HTTP/1.1 404 Not Found\r\n\r\nFile non trovato".encode('utf-8')
 
         client_socket.sendall(response)
 
